@@ -48,7 +48,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of the implemented features:
 
-<img src="YOUR-GIF-LINK-HERE" title="Explore Africa Video Walkthrough" width="" alt="Explore Africa Video Walkthrough" />
+<img src="[YOUR-GIF-LINK-HERE](https://github.com/saccoba/African-Countries-Travel-Guide/blob/main/explore-africa/src/data/Walkthrought1.gif)" title="Explore Africa Video Walkthrough" width="" alt="Explore Africa Video Walkthrough" />
 
 GIF created with **ScreenToGif**.
 
