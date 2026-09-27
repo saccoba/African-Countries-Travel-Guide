@@ -38,7 +38,7 @@ The following **additional** features are implemented:
 
 Here is a walkthrough of the implemented features:
 
-<img src="YOUR-GIF-LINK-HERE" title="Explore Africa Video Walkthrough" width="" alt="Explore Africa Video Walkthrough" />
+<img src="explore-africa/src/data/Walkthrought1.gif" />
 
 GIF created with **ScreenToGif**.
 
