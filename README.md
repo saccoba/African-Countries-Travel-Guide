@@ -1,8 +1,8 @@
-# WEB103 Project 1 - Explore Africa
+# WEB103 Project 2 - Explore Africa
 
 Submitted by: **Mohamed Alie Conteh**
 
-About this web app: **Explore Africa is a travel guide that allows users to discover selected African countries. The homepage displays each country as an interactive card containing its flag, capital, region, and popular attraction. Users can select a country to view a detailed page containing all of its information.**
+About this web app: **Explore Africa is a travel guide that allows users to discover African countries and learn about their capitals, regions, languages, and popular attractions. The country information is retrieved from a PostgreSQL database through an Express API. Users can search for countries and open an individual page to view more information about each country.**
 
 Time spent: **3 hours**
 
@@ -11,72 +11,86 @@ Time spent: **3 hours**
 The following **required** functionality is completed:
 
 - [x] **The web app uses only HTML, CSS, and JavaScript without a frontend framework**
-- [x] **The web app displays a title**
-- [x] **The web app displays at least five unique list items, each with at least three displayed attributes**
-- [x] **The user can click on each item in the list to see a detailed view of it, including all data fields**
-  - [x] **Each detail view has a unique endpoint**
-  - Examples:
-    - `/countries/sierra-leone`
-    - `/countries/ghana`
-    - `/countries/nigeria`
-    - `/countries/kenya`
-    - `/countries/south-africa`
-    - `/countries/egypt`
-- [x] **The web app serves an appropriate 404 page when no matching country route is defined**
-- [x] **The web app is styled using PicoCSS**
+- [x] **The web app is connected to a PostgreSQL database, with an appropriately structured database table for the list items**
+  - [X] **The walkthrough includes a view of the Render dashboard demonstrating that the PostgreSQL database is available**
+  - [X] **The walkthrough demonstrates the database table contents using `SELECT * FROM countries;`**
 
 ## Optional Features
 
 The following **optional** features are implemented:
 
-- [x] **The web app displays the countries in a unique card layout**
-- [x] **The country cards have staggered entrance animations**
-- [x] **The country images enlarge when the user hovers over a card**
+- [x] **The user can search for items by a specific attribute**
+  - Users can search by country name, capital, region, language, or attraction.
 
 ## Additional Features
 
 The following **additional** features are implemented:
 
-- [x] Responsive layout for desktop, tablet, and mobile screens
-- [x] Country flags displayed using external image links
-- [x] Back-to-home navigation on every country detail page
-- [x] Custom African-inspired colors and styling
-- [x] Interactive card hover effects
-- [x] Dynamically generated country cards using JavaScript
+- [x] Users can select a country and view a detailed country page.
+- [x] Each country displays its flag, capital, region, language, attraction, and description.
+- [x] The application displays a custom “Country Not Found” page for an invalid country URL.
+- [x] The application displays an error message if country data cannot be loaded.
+- [x] The website uses a responsive card layout.
+- [x] Country information is supplied through an Express API.
+- [x] The API retrieves country information from a PostgreSQL database.
 
 ## Video Walkthrough
 
-Here's a walkthrough of the implemented features:
+Here is a walkthrough of the implemented features:
 
-<img src="[YOUR-GIF-LINK-HERE](https://github.com/saccoba/African-Countries-Travel-Guide/blob/main/explore-africa/src/data/Walkthrought1.gif)" title="Explore Africa Video Walkthrough" width="" alt="Explore Africa Video Walkthrough" />
+<img src="YOUR-GIF-LINK-HERE" title="Explore Africa Video Walkthrough" width="" alt="Explore Africa Video Walkthrough" />
 
 GIF created with **ScreenToGif**.
 
 The walkthrough demonstrates:
 
-1. The Explore Africa homepage and website title
-2. Six unique African country cards
-3. At least three displayed attributes for every country
-4. The card animations and hover effects
-5. Selecting different countries
-6. The unique URL for each country detail page
-7. All country fields displayed on the detail page
-8. The custom 404 page
-9. The responsive PicoCSS styling
+1. The Explore Africa homepage.
+2. Country data loaded from PostgreSQL.
+3. Searching by country name, capital, region, language, or attraction.
+4. Opening an individual country page.
+5. The Render dashboard showing the PostgreSQL database.
+6. The database table contents displayed using:
 
-## Notes
+```sql
+SELECT * FROM countries;
+## Challenges Encountered
 
-One challenge I encountered was creating a unique detail page for each country without using a frontend framework. I solved this by reading the URL path with JavaScript, finding the matching country using its slug, and dynamically displaying its information. I also created a custom 404 view for country routes that do not match any country in the data.
+One challenge was connecting the frontend, Express server, and PostgreSQL database. The original database table did not contain all the columns needed by the frontend. The table and database reset script were updated to include the `attraction`, `image`, and `description` columns.
 
-Another challenge was ensuring that every country card linked to the correct detail route. I solved this by giving every country a unique `slug` field and using it to construct the country URL.
+Another challenge was allowing the frontend and backend to communicate while running on different ports. CORS middleware was added to the Express server so that the frontend could request information from the API.
+
+It was also necessary to run the frontend and backend simultaneously. The frontend runs through Vite, while the backend runs through Node.js and Express.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- Express
+- PostgreSQL
+- Render PostgreSQL
+- Vite
+- CORS
+- Git and GitHub
+
+## Future Improvements
+
+Future improvements could include:
+
+- Adding more African countries.
+- Adding filtering by African region.
+- Adding sorting options.
+- Adding more travel information for each country.
+- Adding user accounts and favorite countries.
+- Adding an interactive map of Africa.
+- Deploying both the frontend and backend.
 
 ## License
 
 Copyright 2026 Mohamed Alie Conteh
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at:
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at:
 
 > http://www.apache.org/licenses/LICENSE-2.0
 
