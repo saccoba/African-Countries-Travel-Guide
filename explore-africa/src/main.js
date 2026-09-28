@@ -1,6 +1,9 @@
 import "./style.css";
 
-const API_URL = "http://localhost:3000/api/countries";
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "http://localhost:3000/api/countries";
+
 const currentPath = window.location.pathname;
 
 const showError = (message) => {
